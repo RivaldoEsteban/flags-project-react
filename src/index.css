@@ -1,8 +1,9 @@
 :root {
   --font: "Nunito Sans", sans-serif;
   --black: #111517;
-  --whit: white;
+  --white: white;
   --backgroundLight: #fafafa;
+  --backgroundDark: #1a2833;
 }
 
 body {

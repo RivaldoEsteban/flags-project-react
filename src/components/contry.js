@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const ContryStyled = styled.div`
   width: 16.5rem;
-  border: 1px solid blue;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0px 0px 7px 2px rgb(0, 0, 0, 0.1);
   overflow: hidden;
+  text-align: start;
   img {
     max-width: 100%;
     object-fit: cover;
