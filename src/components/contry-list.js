@@ -37,7 +37,7 @@ function ContryList() {
 
   return (
     <ContryListStyled>
-      <CountryByName placeholder="search name" />
+      <CountryByName countries={countries} />
       <Region countries={countries} />
       {countryList.map((country) => {
         return (

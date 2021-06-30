@@ -49,43 +49,6 @@ function Region({ countries }) {
         <option value="asia">asia</option>
         <option value="oceania">oceania</option>
       </select>
-      {/* <div name="filter by region" id="" defaultValue="filter by region">
-        <option
-          onClick={() => {
-            region("asia");
-          }}
-        >
-          asia
-        </option>
-        <option
-          onClick={() => {
-            region("europe");
-          }}
-        >
-          europe
-        </option>
-        <option
-          onClick={() => {
-            region("oceania");
-          }}
-        >
-          oceania
-        </option>
-        <option
-          onClick={() => {
-            region("americas");
-          }}
-        >
-          americas
-        </option>
-        <option
-          onClick={() => {
-            region("africa");
-          }}
-        >
-          africa
-        </option>
-      </div> */}
     </CountryByRegionStyled>
   );
 }

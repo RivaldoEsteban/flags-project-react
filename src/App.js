@@ -17,15 +17,8 @@ function reducer(state = {}, action) {
     case "SET_COUNTRY_REGION": {
       return { ...state, countryList: action.payload };
     }
-    case "AMERICAS": {
-      return { ...state, countryList: action.payload };
-    }
-
-    case "OCEANIA": {
-      return { ...state, countryList: action.payload };
-    }
     case "SET_COUNTRY_NAME": {
-      // return { ...state, countryList: action.payload };
+      return { ...state, countryList: action.payload };
     }
     default: {
       return state;

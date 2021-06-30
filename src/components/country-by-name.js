@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 
-const CountryByNameStyled = styled.label`
+const CountryByNameStyled = styled.form`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -26,16 +27,33 @@ const CountryByNameStyled = styled.label`
   }
 `;
 
-function CountryByName({ ...props }) {
+function CountryByName({ countries }) {
+  const search = useRef(null);
+  const countryList = useSelector((state) => state.countryList);
+  const dispatch = useDispatch();
+
+  function searchCountryName(event) {
+    event.preventDefault();
+    console.log("hola");
+    const country = countryList.filter((country) => {
+      if (country.name.toLowerCase().startsWith(search.current.value)) {
+        return true;
+      }
+    });
+    dispatch({
+      type: "SET_COUNTRY_NAME",
+      payload: country,
+    });
+  }
   return (
-    <CountryByNameStyled type="text" placeholder="search name">
+    <CountryByNameStyled onChange={searchCountryName}>
       <img
         src="./icons/search.svg"
         alt="icon search"
         width="20px"
         height="20px"
       />
-      <input type="text" {...props} />
+      <input type="text" placeholder="search country" ref={search} />
     </CountryByNameStyled>
   );
 }
