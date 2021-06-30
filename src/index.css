@@ -19,3 +19,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.country-list > * {
+  background: #273542;
+}
+
+.headerStyle {
+  background: #273542;
+  color: red;
+}
+
+.inputStyle {
+  background: #273542;
+  color: #fafafa;
+}
+
+.bodyStyle {
+  background: #1a2833;
+  color: white;
+}
+
+.button-region-filter {
+  background: #273542;
+}

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import "./App.css";
+import Header from "./components/header";
 import ContryList from "./components/contry-list";
+import "./icoMoon.css";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
@@ -40,9 +42,8 @@ function App() {
   return (
     <AppStyled>
       <Provider store={store}>
-        <div className="wrapper">
-          <ContryList />
-        </div>
+        <Header />
+        <ContryList />
       </Provider>
     </AppStyled>
   );

@@ -6,10 +6,20 @@ import CountryByName from "./country-by-name";
 import Region from "./country-by-region";
 
 const ContryListStyled = styled.div`
-  display: grid;
-  padding: 4rem 2rem;
-  grid-row-gap: 2.3rem;
-  justify-content: center;
+  /* padding: 50px; */
+  .countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    margin: 2rem 0;
+  }
 `;
 
 function ContryList() {
@@ -37,20 +47,26 @@ function ContryList() {
 
   return (
     <ContryListStyled>
-      <CountryByName countries={countries} />
-      <Region countries={countries} />
-      {countryList.map((country) => {
-        return (
-          <Contry
-            flag={country.flag}
-            name={country.name}
-            population={country.population}
-            region={country.region}
-            capital={country.capital}
-            key={country.name}
-          />
-        );
-      })}
+      <div className="wrapper">
+        <div className="actions" id="actions">
+          <CountryByName countries={countries} />
+          <Region countries={countries} />
+        </div>
+        <div className="countries-container" id="container">
+          {countryList.map((country) => {
+            return (
+              <Contry
+                flag={country.flag}
+                name={country.name}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
+                key={country.name}
+              />
+            );
+          })}
+        </div>
+      </div>
     </ContryListStyled>
   );
 }

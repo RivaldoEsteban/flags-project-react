@@ -7,6 +7,8 @@ const CountryByNameStyled = styled.form`
   display: inline-flex;
   align-items: center;
   height: 24px;
+  flex: 1;
+  max-width: 500px;
   input {
     flex: 1;
     border-radius: 5px;
@@ -18,12 +20,12 @@ const CountryByNameStyled = styled.form`
       color: #c4c4c4;
     }
   }
-  img {
+  i {
     position: absolute;
     left: 0;
-    height: 18px;
     margin: 0 1rem;
-    opacity: 0.2;
+    font-size: 1.5rem;
+    color: #c4c4c4;
   }
 `;
 
@@ -32,10 +34,8 @@ function CountryByName({ countries }) {
   const countryList = useSelector((state) => state.countryList);
   const dispatch = useDispatch();
 
-  function searchCountryName(event) {
-    event.preventDefault();
-    console.log("hola");
-    const country = countryList.filter((country) => {
+  function searchCountryName() {
+    const country = countries.filter((country) => {
       if (country.name.toLowerCase().startsWith(search.current.value)) {
         return true;
       }
@@ -47,13 +47,8 @@ function CountryByName({ countries }) {
   }
   return (
     <CountryByNameStyled onChange={searchCountryName}>
-      <img
-        src="./icons/search.svg"
-        alt="icon search"
-        width="20px"
-        height="20px"
-      />
-      <input type="text" placeholder="search country" ref={search} />
+      <i className="icon-search"></i>
+      <input type="text" placeholder="search country" ref={search} id="input" />
     </CountryByNameStyled>
   );
 }

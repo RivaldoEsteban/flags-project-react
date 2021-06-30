@@ -27,7 +27,7 @@ const ContryStyled = styled.div`
   }
 `;
 
-function Contry({ flag, name, population, region, capital }) {
+function Contry({ flag, name, population, region, capital, id }) {
   return (
     <ContryStyled>
       <div>
