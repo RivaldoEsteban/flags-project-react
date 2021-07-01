@@ -1,4 +1,4 @@
-#Rick and Morty React 
+# Flags Project React
 
 En este proyecto se consumio la api de https://restcountries.eu/.
 Stack: react , react-routeer-dom , redux , react-redux , styled-componets
