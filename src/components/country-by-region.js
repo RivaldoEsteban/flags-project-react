@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+
 const CountryByRegionStyled = styled.div`
   height: inherit;
   select {
@@ -21,9 +23,11 @@ const CountryByRegionStyled = styled.div`
 
 function Region({ countries }) {
   const select = useRef(null);
-
+  const history = useHistory();
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    console.log(history);
+  }, []);
   function regionChange() {
     const region = select.current.value;
     if (region === "all") {
@@ -34,6 +38,7 @@ function Region({ countries }) {
     }
     const regionContries = countries.filter((country) => {
       if (country.region.toLowerCase() === region) {
+        history.push(region);
         return true;
       }
     });

@@ -6,7 +6,7 @@ import ContryList from "./components/contry-list";
 import "./icoMoon.css";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-
+import { BrowserRouter as Router } from "react-router-dom";
 const initialState = {
   countryList: [],
 };
@@ -41,10 +41,12 @@ const AppStyled = styled.div`
 function App() {
   return (
     <AppStyled>
-      <Provider store={store}>
-        <Header />
-        <ContryList />
-      </Provider>
+      <Router>
+        <Provider store={store}>
+          <Header />
+          <ContryList />
+        </Provider>
+      </Router>
     </AppStyled>
   );
 }

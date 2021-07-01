@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { useHistory } from "react-router-dom";
 const ContryStyled = styled.div`
   width: 16.5rem;
   cursor: pointer;
@@ -31,8 +31,12 @@ const ContryStyled = styled.div`
 `;
 
 function Contry({ flag, name, population, region, capital, id }) {
+  const history = useHistory();
+  function handleClickCountry() {
+    history.push({ search: `?search=${name}` });
+  }
   return (
-    <ContryStyled>
+    <ContryStyled onClick={handleClickCountry}>
       <div>
         <img loading="lazy" src={flag} alt={`bandera de ${name}`} />
         <div className="details">

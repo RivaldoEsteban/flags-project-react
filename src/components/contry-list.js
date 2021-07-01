@@ -6,12 +6,14 @@ import CountryByName from "./country-by-name";
 import Region from "./country-by-region";
 
 const ContryListStyled = styled.main`
-  /* padding: 50px; */
   .countries-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 80px;
+  }
+  .countries-container > * {
+    margin: auto;
   }
   .actions {
     display: flex;
