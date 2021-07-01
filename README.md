@@ -3,7 +3,7 @@
 En este proyecto se consumio la api de https://restcountries.eu/.
 Stack: react , react-routeer-dom , redux , react-redux , styled-componets
 
-<img src="./public/flags.gif" alt="gif del proyecto"/>
+<img src="./public/gif/flags.gif" alt="gif del proyecto"/>
 
 
 # Getting Started with Create React App
