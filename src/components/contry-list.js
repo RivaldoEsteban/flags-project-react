@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CountryByName from "./country-by-name";
 import Region from "./country-by-region";
 
-const ContryListStyled = styled.div`
+const ContryListStyled = styled.main`
   /* padding: 50px; */
   .countries-container {
     display: flex;

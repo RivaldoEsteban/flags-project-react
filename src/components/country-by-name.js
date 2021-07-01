@@ -36,7 +36,11 @@ function CountryByName({ countries }) {
 
   function searchCountryName() {
     const country = countries.filter((country) => {
-      if (country.name.toLowerCase().startsWith(search.current.value)) {
+      if (
+        country.name
+          .toLowerCase()
+          .startsWith(search.current.value.toLowerCase())
+      ) {
         return true;
       }
     });
