@@ -24,6 +24,11 @@ const ContryListStyled = styled.div`
   @media (max-width: 500px) {
     .actions {
       display: block;
+      margin-bottom: 100px;
+    }
+    .actions > * {
+      margin-bottom: 30px;
+      width: 100%;
     }
   }
 `;

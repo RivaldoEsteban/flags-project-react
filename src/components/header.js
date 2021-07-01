@@ -27,6 +27,11 @@ const HeaderStyled = styled.header`
     font-size: 14px;
     font-weight: 600;
   }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
 `;
 
 function Header() {
