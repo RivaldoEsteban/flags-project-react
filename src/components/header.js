@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const HeaderStyled = styled.header`
   background: white;
+  box-shadow: rgb(0 0 0 / 6%) 0px 2px 4px 0px;
+
   .header-content {
     height: 80px;
     display: flex;

@@ -9,8 +9,11 @@ const ContryStyled = styled.div`
   overflow: hidden;
   text-align: start;
   img {
-    max-width: 100%;
+    width: 100%;
+    height: 170px;
     object-fit: cover;
+    vertical-align: top;
+    border-radius: 5px 5px 0px 0px;
   }
   .details {
     padding: 1.5rem;

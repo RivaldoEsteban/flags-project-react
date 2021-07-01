@@ -19,6 +19,12 @@ const ContryListStyled = styled.div`
     justify-content: space-between;
     height: 45px;
     margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 500px) {
+    .actions {
+      display: block;
+    }
   }
 `;
 
